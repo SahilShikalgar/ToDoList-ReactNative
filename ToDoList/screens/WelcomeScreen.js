@@ -5,8 +5,7 @@ import MainButton from '../components/MainButton';
 const WelcomeScreen = (props) => {
 
     const goToMainScreen = () => {
-        props.navigation.navigate('Welcome');
-        console.log(props.navigation.navigate);
+        props.navigation.navigate({routeName: 'Main'});
     }
 
     return (
