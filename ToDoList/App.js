@@ -1,11 +1,31 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, ScrollView } from 'react-native';
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
+import ToDoNavigator from './navigator/ToDoNavigator';
+
+const fetchFonts = () => {
+  return Font.loadAsync({
+    'lato': require('./assets/fonts/Lato-Regular.ttf'),
+    'lato-bold': require('./assets/fonts/Lato-Bold.ttf')
+  });
+}
 
 export default function App() {
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  if (!dataLoaded) {
+    return (
+      <AppLoading 
+        startAsync={fetchFonts}
+        onFinish={() => { setDataLoaded(true) }}
+        onError={(err) => { console.log(err) }}
+      />
+    );
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+      <ToDoNavigator />
   );
 }
 
