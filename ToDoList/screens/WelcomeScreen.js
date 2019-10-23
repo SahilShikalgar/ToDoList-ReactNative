@@ -3,7 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import MainButton from '../components/MainButton';
  
 const WelcomeScreen = (props) => {
-
+    console.log(props);
     const goToMainScreen = () => {
         props.navigation.navigate({routeName: 'Main'});
     }
