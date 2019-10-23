@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import MainButton from '../components/MainButton';
+import { Ionicons } from '@expo/vector-icons';
  
 const WelcomeScreen = (props) => {
-    console.log(props);
     const goToMainScreen = () => {
         props.navigation.navigate({routeName: 'Main'});
     }
@@ -12,7 +12,10 @@ const WelcomeScreen = (props) => {
         <View style={styles.screen}>
             <Text style={styles.title}>Welcome</Text>
             <View style={styles.buttonContainer}>
-                <MainButton onPress={goToMainScreen}>NEXT</MainButton>
+                <MainButton onPress={goToMainScreen} style={styles.button}>
+                    NEXT&nbsp;
+                    <Ionicons name="ios-arrow-dropright" size={24} color="white" />&nbsp;
+                </MainButton>
             </View>
         </View>
     );
@@ -32,9 +35,13 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         marginTop: 300,
-        width: 150,
         borderColor: 'black',
-        borderRadius: 25
+        borderRadius: 25,
+        flexDirection: "row"
+    },
+    button: {
+        alignSelf: "center",
+        width: "50%"
     }
 });
 

@@ -1,12 +1,22 @@
 const initialState = {
-    ToDoList: []
+    ToDoList: [
+      "Learn React",
+      "Learn React Native",
+      "Learn Angular",
+      "Learn Vue JS",
+      "Learn Dart",
+      "Learn Flutter",
+      "Learn Laravel",
+      "Learn Go",
+      "Learn Spring Boot",
+      "Learn Node JS"
+    ]
 }
 
 const appReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_LIST_ITEM':
-      console.log("Your choice is ADD_LIST_ITEM!")
-      return [...state, { ToDoList: [...state.ToDoList, action.payload] }]
+      return { ...state, ToDoList: [...state.ToDoList, action.payload] }
     default:
       return state;
   }

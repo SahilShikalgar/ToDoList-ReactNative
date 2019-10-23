@@ -10,7 +10,7 @@ export default function MainButton(props) {
     }
 
     return (
-        <View style={styles.buttonContainer}>
+        <View style={{...styles.buttonContainer, ...props.style}}>
             <ButtonComponent activeOpacity={0.6} onPress={props.onPress}>
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>{props.children}</Text>

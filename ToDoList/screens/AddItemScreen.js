@@ -1,43 +1,57 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import MainButton from '../components/MainButton';
+import { useDispatch } from 'react-redux';
+import { addListItem } from '../redux/app.actions';
 
 export default function AddItemScreen(props) {
-    const [enteredValue, setEnteredValue] = useState();
+    const [enteredValue, setEnteredValue] = useState('');
+    const [showWarning, setShowWarning] = useState();
+
+    const dispatch = useDispatch();
 
     const itemInputHandler = (inputText) => {
         setEnteredValue(inputText);
+        setShowWarning(false);
     }
 
     const resetInputHandler = () => {
         setEnteredValue('');
+        setShowWarning(false);
     }
 
     const onAddItemHandler = () => {
-        props.navigation.navigate({
-            routeName: 'Main',
-            params: {
-                title: enteredValue
-            }
-        });
+        if (enteredValue.length === 0) {
+            setShowWarning(true);
+            return;
+        }
+        dispatch(addListItem(enteredValue));
+        props.navigation.navigate({routeName: 'Main'});
+    }
+
+    let marginStyle = { marginTop: 20 };
+
+    if (!showWarning) {
+        marginStyle = { marginVertical: 20 }
     }
 
     return (
         <View style={styles.screen}>
             <Text style={styles.text}>Enter Name:</Text>
             <TextInput 
-                style={styles.input} 
+                style={{...styles.input, ...marginStyle }} 
                 blurOnSubmit
                 autoCapitalize="none"
                 autoCorrect={false}
                 keyboardType="default"
-                maxLength={10}
+                maxLength={40}
                 onChangeText={itemInputHandler}
                 value={enteredValue}
             />
+            { showWarning ? <Text style={styles.warningText}>Name can't be blank!</Text> : null }
             <View style={styles.buttonContainer}>
-                <MainButton onPress={onAddItemHandler}>Add</MainButton>
-                <MainButton onPress={resetInputHandler}>Reset</MainButton>
+                <MainButton onPress={onAddItemHandler} style={{width: "40%"}}>Add</MainButton>
+                <MainButton onPress={resetInputHandler} style={{width: "40%"}}>Reset</MainButton>
             </View>
         </View>
     )
@@ -50,14 +64,18 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignSelf: 'center',
         borderBottomColor: 'grey',
-        borderBottomWidth: 1,
-        marginVertical: 10
+        borderBottomWidth: 1
+    },
+    warningText: {
+        marginBottom: 10,
+        color: 'red'
     },
     text: {
         width: "80%",
         flexDirection: "row",
         alignSelf: 'center',
-        fontFamily: 'lato'
+        fontFamily: 'lato',
+        fontSize: 16
     },
     screen: {
         marginTop: "10%",

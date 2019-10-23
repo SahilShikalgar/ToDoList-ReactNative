@@ -6,6 +6,7 @@ import ToDoNavigator from './navigator/ToDoNavigator';
 import { createStore, combineReducers } from 'redux';
 import appReducer from './redux/app.reducer';
 import { Provider } from 'react-redux';
+import WelcomeScreen from './screens/WelcomeScreen';
 
 const rootReducer = combineReducers({
   toDo: appReducer
