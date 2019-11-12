@@ -1,13 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import MainButton from '../MainButton';
-import { TouchableOpacity, TouchableNativeFeedback } from 'react';
+import renderer from 'react-test-renderer';
 
 describe('Main Button Component', () => {
     const goToMainScreen = jest.fn();
-    const Ionicons = jest.fn();
     const component = shallow(
-        <MainButton onPress={goToMainScreen} Ionicons={Ionicons}>
+        <MainButton onPress={goToMainScreen}>
             NEXT
         </MainButton>
     );
@@ -16,9 +15,10 @@ describe('Main Button Component', () => {
         expect(component).toMatchSnapshot();
     });
 
-    it('should render TouchableNativeFeedback for Platform.Version >= 21', () => {
-        // console.log(component);
-        // expect(typeof component.ButtonComponent).toBe(TouchableOpacity);
-        console.log(component);
+    it('should call onPress on click', async() => {
+        // const onPress = jest.fn();
+        // const wrapper = component.instance();
+        // wrapper.onPress();
+        // expect(onPress).toHaveBeenCalled();
     });
 });
