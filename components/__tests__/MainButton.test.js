@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import MainButton from '../MainButton';
-import renderer from 'react-test-renderer';
+import { TouchableOpacity } from 'react-native';
 
 describe('Main Button Component', () => {
     const goToMainScreen = jest.fn();
@@ -16,9 +16,8 @@ describe('Main Button Component', () => {
     });
 
     it('should call onPress on click', async() => {
-        // const onPress = jest.fn();
-        // const wrapper = component.instance();
-        // wrapper.onPress();
-        // expect(onPress).toHaveBeenCalled();
+        const wrapper = component.find(TouchableOpacity);
+        wrapper.getElement().props.onPress()
+        expect(goToMainScreen).toHaveBeenCalled();
     });
 });
