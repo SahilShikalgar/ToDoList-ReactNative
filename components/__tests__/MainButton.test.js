@@ -5,7 +5,7 @@ import { TouchableOpacity } from 'react-native';
 
 describe('Main Button Component', () => {
     const goToMainScreen = jest.fn();
-    const component = shallow(
+    const component = shallow (
         <MainButton onPress={goToMainScreen}>
             NEXT
         </MainButton>

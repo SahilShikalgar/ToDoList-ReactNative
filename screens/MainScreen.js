@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, BackHandler } from 'react-native';
+import { connect } from 'react-redux'
 import MainButton from '../components/MainButton';
 import { FlatList } from 'react-native-gesture-handler';
 import { useSelector } from 'react-redux';
-
+import { getListItems } from '../redux/app.actions'
 function Item({title}) {
     return (
         <View style={styles.listItem}>
@@ -12,14 +13,14 @@ function Item({title}) {
     );
 }  
 
-
-export default function MainScreen(props) {
+const MainScreen = (props) => {
     const [toDoList, setToDoList] = useState([]);
     const title = props.navigation.getParam('title');
     const [itemAddedStatus, setItemAddedStatus] = useState(false);
 
-    const toDoListFromStore = [...useSelector(state => state.toDo.ToDoList)].reverse();
-
+    // const toDoListFromStore = [...useSelector(state => state.toDo.ToDoList)].reverse();
+    const toDoListFromStore = [...props.toDo]
+    toDoListFromStore.reverse()
     if (!itemAddedStatus) {
         setToDoList([...toDoList, title]);
         setItemAddedStatus(true);
@@ -91,3 +92,10 @@ const styles = StyleSheet.create({
         alignSelf: "center"
     }
 });
+const mapStateToProps = ({ toDo }) => ({ toDo: toDo.ToDoList })
+const mapDispatchToProps = dispatch => ({
+    getData: () => {
+        dispatch(getListItems())
+    }
+})
+export default connect( mapStateToProps, mapDispatchToProps)(MainScreen)

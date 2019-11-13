@@ -17,6 +17,8 @@ const appReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_LIST_ITEM':
       return { ...state, ToDoList: [...state.ToDoList, action.payload] }
+    case 'GET_LIST_ITEMS':
+      return { ...state.ToDoList }
     default:
       return state;
   }

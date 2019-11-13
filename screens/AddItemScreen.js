@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import MainButton from '../components/MainButton';
-import { useDispatch } from 'react-redux';
 import { addListItem } from '../redux/app.actions';
+import { connect } from 'react-redux';
 
-export default function AddItemScreen(props) {
+const AddItemScreen = (props) => {
     const [enteredValue, setEnteredValue] = useState('');
     const [showWarning, setShowWarning] = useState();
-
-    const dispatch = useDispatch();
 
     const itemInputHandler = (inputText) => {
         setEnteredValue(inputText);
@@ -25,7 +23,7 @@ export default function AddItemScreen(props) {
             setShowWarning(true);
             return;
         }
-        dispatch(addListItem(enteredValue));
+        props.addItem(enteredValue)
         props.navigation.navigate({routeName: 'Main'});
     }
 
@@ -89,3 +87,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15
     }
 });
+const mapDisptchToProps = (dispatch) => ({
+    addItem: (data) => {
+        dispatch(addListItem(data))
+    }
+})
+export default connect(null, mapDisptchToProps)(AddItemScreen);
