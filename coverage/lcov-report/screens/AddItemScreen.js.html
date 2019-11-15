@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">38.6% </span>
+        <span class="strong">27.42% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>22/57</span>
+        <span class='fraction'>17/62</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">11.11% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/9</span>
+        <span class='fraction'>0/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">36% </span>
+        <span class="strong">32.14% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/25</span>
+        <span class='fraction'>9/28</span>
       </div>
     </div>
     <p class="quiet">
@@ -137,17 +137,18 @@
 <a name='L89'></a><a href='#L89'>89</a>
 <a name='L90'></a><a href='#L90'>90</a>
 <a name='L91'></a><a href='#L91'>91</a>
-<a name='L92'></a><a href='#L92'>92</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -228,17 +229,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react';
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import MainButton from '../components/MainButton';
-import { useDispatch } from 'react-redux';
-import { addListItem } from '../redux/app.actions';<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+import { addListItem } from '../redux/app.actions';
+import { connect } from 'react-redux';<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
 &nbsp;
-export default function AddItemScreen(props) {
-    const [enteredValue, setEnteredValue] = useState('');
-    const [showWarning, setShowWarning] = useState();
-&nbsp;
-    const dispatch = useDispatch();
+const AddItemScreen = (props)<span class="fstat-no" title="function not covered" > =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    const [enteredValue, se</span>tEnteredValue<span class="cstat-no" title="statement not covered" >] = useState('');<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+<span class="cstat-no" title="statement not covered" >    const [showWarning, s</span>etShowWarning<span class="cstat-no" title="statement not covered" >] = useState();<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
 &nbsp;
     const itemInputHandle<span class="cstat-no" title="statement not covered" >r = (inpu<span class="fstat-no" title="function not covered" >tText) =&gt; {</span></span>
 <span class="cstat-no" title="statement not covered" >        setEnteredValue(inputTex</span>t);
@@ -255,7 +259,7 @@ export default function AddItemScreen(props) {
 <span class="cstat-no" title="statement not covered" >            setShowWarning(t</span>rue);
 <span class="cstat-no" title="statement not covered" >            re</span>turn;
         }
-<span class="cstat-no" title="statement not covered" >        dispatch(addListItem(enteredValue));</span>
+<span class="cstat-no" title="statement not covered" >        props.addItem(enteredValu</span>e)
 <span class="cstat-no" title="statement not covered" >        props.navigation.navigate({routeName: 'Main'})</span>;
     }
 &nbsp;
@@ -319,13 +323,18 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15
     }
 });
-&nbsp;</pre></td></tr>
+const mapDisptchToProps = (dispat<span class="fstat-no" title="function not covered" >ch) =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span>
+    addItem: (data) =&gt;<span class="fstat-no" title="function not covered" > {</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(addListItem(data))</span>
+    }
+})
+export default connect(null, mapDisptchToProps)(AddItemScreen);</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 13 2019 14:36:36 GMT+0530 (India Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Nov 15 2019 15:04:40 GMT+0530 (India Standard Time)
 </div>
 </div>
 <script src="..\prettify.js"></script>

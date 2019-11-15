@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddItemScreen should rendere properly 1`] = `ShallowWrapper {}`;

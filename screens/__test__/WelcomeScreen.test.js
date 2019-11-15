@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import AddItemScreen from '../AddItemScreen';
+import WelcomeScreen from '../WelcomeScreen';
 
 describe('AddItemScreen', () => {
     const component = shallow (
-        <AddItemScreen />
+        <WelcomeScreen />
     );
 
     it('should rendere properly', () => {
