@@ -18,13 +18,23 @@ const AddItemScreen = (props) => {
         setShowWarning(false);
     }
 
-    const onAddItemHandler = () => {
+    const onAddItemHandler = async() => {
         if (enteredValue.length === 0) {
             setShowWarning(true);
             return;
         }
-        props.addItem(enteredValue)
-        props.navigation.navigate({routeName: 'Main'});
+        await props.addItem(enteredValue)
+        await fetch('https://todolist-react-native.firebaseio.com/toDos.json', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: enteredValue,
+                date: new Date()
+            })
+        });
+        await props.navigation.navigate({routeName: 'Main'});
     }
 
     let marginStyle = { marginTop: 20 };
@@ -57,7 +67,7 @@ const AddItemScreen = (props) => {
 
 const styles = StyleSheet.create({
     input: {
-        height: 30,
+        height: 40,
         width: "80%",
         flexDirection: "row",
         alignSelf: 'center',
