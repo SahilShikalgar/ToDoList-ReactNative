@@ -4,7 +4,7 @@ import MainButton from '../components/MainButton';
 import { addListItem } from '../redux/app.actions';
 import { connect } from 'react-redux';
 
-const AddItemScreen = (props) => {
+export const AddItemScreen = (props) => {
     const [enteredValue, setEnteredValue] = useState('');
     const [showWarning, setShowWarning] = useState();
 
