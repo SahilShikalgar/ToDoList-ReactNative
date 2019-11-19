@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, BackHandler } from 'react-native';
 import { connect } from 'react-redux'
 import MainButton from '../components/MainButton';
 import { FlatList } from 'react-native-gesture-handler';
-import { useSelector } from 'react-redux';
-import { getListItems } from '../redux/app.actions'
-function Item({title}) {
+import { getListItems } from '../redux/app.actions';
+
+export const Item = ({title}) => {
     return (
         <View style={styles.listItem}>
             <Text style={styles.title}>{title}</Text>
@@ -13,7 +13,7 @@ function Item({title}) {
     );
 }  
 
-const MainScreen = (props) => {
+export const MainScreen = (props) => {
     const [toDoList, setToDoList] = useState([]);
     const title = props.navigation.getParam('title');
     const [itemAddedStatus, setItemAddedStatus] = useState(false);
@@ -44,7 +44,6 @@ const MainScreen = (props) => {
                 />
             </View>
             <MainButton
-                onPress={onPressHandler} 
                 style={{width: "50%"}} 
                 onPress={() => { BackHandler.exitApp() }}
                 style={styles.button}
@@ -92,10 +91,13 @@ const styles = StyleSheet.create({
         alignSelf: "center"
     }
 });
+
+
 const mapStateToProps = ({ toDo }) => ({ toDo: toDo.ToDoList })
 const mapDispatchToProps = dispatch => ({
     getData: () => {
         dispatch(getListItems())
     }
 })
-export default connect( mapStateToProps, mapDispatchToProps)(MainScreen)
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainScreen)

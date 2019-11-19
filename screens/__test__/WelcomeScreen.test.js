@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import WelcomeScreen from '../WelcomeScreen';
-import MainButton from '../../components/MainButton';
+import { WelcomeScreen } from '../WelcomeScreen';
+import MainButton from '../../components/MainButton'
 
 describe('WelcomeScreen', () => {
     const navigation = {
@@ -15,7 +15,13 @@ describe('WelcomeScreen', () => {
         expect(component).toMatchSnapshot();
     });
 
-    it('should call goToMainScreen on click', () => {
-        
+    it('Main Button Exists', () => {
+        const mainButton = component.find(MainButton)
+        expect(mainButton).toHaveLength(1)
     });
+
+    it('Touchable Opacity Exists', () => {
+        component.find(MainButton).prop('onPress')()
+        expect(navigation.navigate).toHaveBeenCalled()
+    })
 });

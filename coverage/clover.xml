@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1574095182691" clover="3.2.0">
-  <project timestamp="1574095182691" name="All files">
-    <metrics statements="52" coveredstatements="38" conditionals="34" coveredconditionals="16" methods="22" coveredmethods="9" elements="108" coveredelements="63" complexity="0" loc="52" ncloc="52" packages="4" files="5" classes="5"/>
+<coverage generated="1574160310494" clover="3.2.0">
+  <project timestamp="1574160310494" name="All files">
+    <metrics statements="84" coveredstatements="67" conditionals="36" coveredconditionals="18" methods="31" coveredmethods="13" elements="151" coveredelements="98" complexity="0" loc="84" ncloc="84" packages="4" files="6" classes="6"/>
     <package name="components">
       <metrics statements="8" coveredstatements="7" conditionals="12" coveredconditionals="8" methods="6" coveredmethods="4"/>
       <file name="MainButton.js" path="C:\sahil-git\ToDoList-ReactNative\components\MainButton.js">
         <metrics statements="8" coveredstatements="7" conditionals="12" coveredconditionals="8" methods="6" coveredmethods="4"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="cond" truecount="7" falsecount="3"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="cond" truecount="7" falsecount="3"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
       </file>
     </package>
     <package name="constants">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Colors.js" path="C:\sahil-git\ToDoList-ReactNative\constants\Colors.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
       </file>
     </package>
     <package name="redux">
       <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="app.actions.js" path="C:\sahil-git\ToDoList-ReactNative\redux\app.actions.js">
         <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
       </file>
     </package>
     <package name="screens">
-      <metrics statements="38" coveredstatements="27" conditionals="22" coveredconditionals="8" methods="14" coveredmethods="5"/>
+      <metrics statements="70" coveredstatements="56" conditionals="24" coveredconditionals="10" methods="23" coveredmethods="9"/>
       <file name="AddItemScreen.js" path="C:\sahil-git\ToDoList-ReactNative\screens\AddItemScreen.js">
         <metrics statements="29" coveredstatements="19" conditionals="22" coveredconditionals="8" methods="12" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
@@ -68,17 +68,52 @@
         <line num="102" count="0" type="stmt"/>
         <line num="105" count="1" type="stmt"/>
       </file>
-      <file name="WelcomeScreen.js" path="C:\sahil-git\ToDoList-ReactNative\screens\WelcomeScreen.js">
-        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="MainScreen.js" path="C:\sahil-git\ToDoList-ReactNative\screens\MainScreen.js">
+        <metrics statements="30" coveredstatements="26" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="96" count="1" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
+      </file>
+      <file name="WelcomeScreen.js" path="C:\sahil-git\ToDoList-ReactNative\screens\WelcomeScreen.js">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
       </file>
     </package>
   </project>

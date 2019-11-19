@@ -1,8 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import MainButton from '../components/MainButton';
- 
-const WelcomeScreen = (props) => {
+import { withNavigation } from 'react-navigation'
+
+export const WelcomeScreen = (props) => {
     const goToMainScreen = () => {
         props.navigation.navigate({routeName: 'Main'});
     }
@@ -43,4 +44,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default WelcomeScreen;
+export default withNavigation(WelcomeScreen);
